@@ -11,12 +11,13 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import FeatureColectionSwiper from "../components/HomeComponents/FeatureColectionSwiper";
 import SubBanner from "../components/HomeComponents/SubBanner";
 import Services from "../components/HomeComponents/Services";
+import SpecialProductSwiper from "../components/HomeComponents/SpecialProductSwiper";
 
 const Home = () => {
   return (
     <>
-      <Container class1="home-wrapper-1 py-5 ">
-        <div className="grid grid-cols-1  md:grid-cols-2 gap-2">
+      <Container class1="home-wrapper-1 py-2 md:!py-[60px]">
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-2 ">
           <MainBanner />
           <MiniBanner />
         </div>
@@ -26,19 +27,7 @@ const Home = () => {
       <FeatureColectionSwiper />
       <SubBanner />
 
-      <Container class1="special-wrapper py-5 home-wrapper-2">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Special Products</h3>
-          </div>
-        </div>
-        <div className="row">
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct />
-          <SpecialProduct />
-        </div>
-      </Container>
+      <SpecialProductSwiper />
       <Container class1="popular-wrapper py-5 home-wrapper-2">
         <div className="row">
           <div className="col-12">
@@ -136,15 +125,15 @@ const MainBanner = () => (
           alt="main banner"
         />
         <div className="position-absolute top-[13%] left-[7%] bottom-0 right-auto">
-          <h4 className="text-[10px] sm:text-[15px] text-red-800">
+          <h4 className="text-[10px] sm:text-[15px] text-red-800 mb-2">
             SUPERCHARGED FOR PROS.
           </h4>
-          <h5 className="text-[20px] font-bold">iPad S13+ Pro.</h5>
-          <p className="text-[10px]">
+          <h5 className="text-[20px] font-bold mb-2">iPad S13+ Pro.</h5>
+          <p className="text-[10px] mb-2  lg:text-[15px]">
             From $999.00 or $41.62/mo. <br />
             for 24 mo. Footnote*
           </p>
-          <Link className="px-2 py-1 text-[8px] bg-black text-white rounded-xl text-center">
+          <Link className="px-2 py-1 text-[8px] bg-black text-white rounded-xl text-center lg:text-[12px] lg:p-3 lg:rounded-full">
             BUY NOW
           </Link>
         </div>
@@ -158,16 +147,16 @@ const MainBanner = () => (
           alt="main banner"
         />
         <div className="position-absolute top-[13%] left-[7%] bottom-0 right-auto">
-          <h4 className="text-[10px] sm:text-[15px] text-red-800">
+          <h4 className="text-[10px] sm:text-[15px] text-red-800 mb-2">
             SUPERCHARGED FOR PROS.
           </h4>
-          <h5 className="text-[20px] font-bold">Special Sale</h5>
-          <p className="text-[10px]">
+          <h5 className="text-[20px] font-bold mb-2">Special Sale</h5>
+          <p className="text-[10px] mb-2  lg:text-[15px]">
             From $999.00 or $41.62/mo.
             <br />
             for 24 mo. Footnote*
           </p>
-          <Link className="px-2 py-1 text-[8px] bg-black text-white rounded-xl text-center">
+          <Link className="px-2 py-1 text-[8px] bg-black text-white rounded-xl text-center mb-2  lg:text-[12px] lg:p-3 lg:rounded-full">
             BUY NOW
           </Link>
         </div>
@@ -185,9 +174,13 @@ const MiniBanner = () => (
       />
 
       <div className="position-absolute top-[13%] left-[7%] bottom-0 right-auto">
-        <h4 className="text-[10px]  text-red-800">BEST SALE</h4>
-        <h5 className="text-[20px] font-bold my-2">Laptops max</h5>
-        <p className="text-[10px]">
+        <h4 className="text-[10px]  text-red-800 md-2 xl:text-[14px]">
+          BEST SALE
+        </h4>
+        <h5 className=" font-bold my-2 sm:text-[15px] mb-2 xl:text-[20px]">
+          Laptops max
+        </h5>
+        <p className="text-[10px] mb-2 xl:text-[14px]">
           From $999.00 <br /> or $41.62/mo.
         </p>
       </div>
@@ -200,9 +193,13 @@ const MiniBanner = () => (
       />
 
       <div className="position-absolute top-[13%] left-[7%] bottom-0 right-auto">
-        <h4 className="text-[10px]  text-red-800">NEW ARIVAL</h4>
-        <h5 className="text-[20px] font-bold my-2">Buy Ipad Air</h5>
-        <p className="text-[10px]">
+        <h4 className="text-[10px]  text-red-800 md-2 xl:text-[14px]">
+          NEW ARIVAL
+        </h4>
+        <h5 className=" font-bold my-2 sm:text-[15px] mb-2 xl:text-[20px]">
+          Buy Ipad Air
+        </h5>
+        <p className="text-[10px] mb-2 xl:text-[14px]">
           From $599.00 <br /> or $49.99/mo. for 12 mo*.
         </p>
       </div>
@@ -215,9 +212,13 @@ const MiniBanner = () => (
       />
 
       <div className="position-absolute top-[13%] left-[7%] bottom-0 right-auto">
-        <h4 className="text-[10px]  text-red-800">15% OFF</h4>
-        <h5 className="text-[20px] font-bold my-2">Smartwatch 7</h5>
-        <p className="text-[10px]">
+        <h4 className="text-[10px]  text-red-800 md-2 xl:text-[14px]">
+          15% OFF
+        </h4>
+        <h5 className=" font-bold my-2 sm:text-[15px] mb-2 xl:text-[20px]">
+          Smartwatch 7
+        </h5>
+        <p className="text-[10px] mb-2 xl:text-[14px]">
           Shop the lastest brand <br /> styles and colors
         </p>
       </div>
@@ -230,9 +231,13 @@ const MiniBanner = () => (
       />
 
       <div className="position-absolute top-[13%] left-[7%] bottom-0 right-auto">
-        <h4 className="text-[10px]  text-red-800">FREE EVERGRAVING</h4>
-        <h5 className="text-[20px] font-bold my-2">AirPods Max</h5>
-        <p className="text-[10px]">
+        <h4 className="text-[10px]  text-red-800 md-2 xl:text-[14px]">
+          FREE EVERGRAVING
+        </h4>
+        <h5 className=" font-bold my-2 sm:text-[15px] mb-2  xl:text-[20px]">
+          AirPods Max
+        </h5>
+        <p className="text-[10px] mb-2 xl:text-[14px]">
           High fidelity playback & <br /> ultra low distortion
         </p>
       </div>

@@ -1,29 +1,29 @@
-import React, { useRef } from "react";
+import React from "react";
 import Container from "../Container";
-import ProductCard from "../ProductCard";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Autoplay } from "swiper";
-import { useMediaQuery } from "usehooks-ts";
+import SpecialProduct from "../SpecialProduct";
+import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperButton from "./SwiperButton";
 import classNames from "classnames";
+import { useMediaQuery } from "usehooks-ts";
+import { Autoplay } from "swiper";
 const swiperBreakPoints = {
   1: {
-    slidesPerView: 2,
+    slidesPerView: 1,
   },
   480: {
-    slidesPerView: 2,
+    slidesPerView: 1,
   },
   660: {
-    slidesPerView: 3,
+    slidesPerView: 2,
   },
   970: {
-    slidesPerView: 4,
+    slidesPerView: 2,
   },
   1300: {
-    slidesPerView: 6,
+    slidesPerView: 3,
   },
 };
-function FeatureColectionSwiper() {
+function SpecialProductSwiper() {
   const matches = useMediaQuery("(min-width: 720px)");
   return (
     <Container class1="featured-wrapper py-5 home-wrapper-2">
@@ -61,7 +61,8 @@ function FeatureColectionSwiper() {
 
         {Array.from({ length: 10 }).map((v, i) => (
           <SwiperSlide key={i}>
-            <ProductCard />
+            <SpecialProduct />
+            <SpecialProduct />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -69,4 +70,4 @@ function FeatureColectionSwiper() {
   );
 }
 
-export default FeatureColectionSwiper;
+export default SpecialProductSwiper;

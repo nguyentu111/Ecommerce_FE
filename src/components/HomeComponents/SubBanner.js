@@ -18,7 +18,7 @@ const swiperBreakPoints = {
     slidesPerView: 4,
   },
   1300: {
-    slidesPerView: 5,
+    slidesPerView: 4,
   },
 };
 const data = [
@@ -79,7 +79,7 @@ function SubBanner() {
             <Link
               to={val.link}
               className={classNames(
-                "famous-card position-relative group block overflow-hidden  rounded-lg",
+                "famous-card position-relative group block overflow-hidden  rounded-lg  card-wrapper p-0",
                 i === 0 ? "text-white" : "text-black hover:text-black"
               )}
             >

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { collection_cards } from "../../utils/Data";
+import { Link } from "react-router-dom";
 const swiperBreakPoints = {
   1: {
     slidesPerView: 1,
@@ -30,7 +31,6 @@ function CollectionSwiper() {
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
-          lazy
           breakpoints={swiperBreakPoints}
           spaceBetween={0}
           slidesPerView={3}
@@ -41,9 +41,12 @@ function CollectionSwiper() {
             if (i % 2 === 1) return null;
             return (
               <SwiperSlide key={i}>
-                <div className="flex justify-between ">
+                <Link
+                  to={item.link}
+                  className="flex justify-between group hover:text-black"
+                >
                   <div className="my-auto pt-[10px] pl-[22px]">
-                    <h3 className="font-bold text-[14px] md:text-[16px] mb-2">
+                    <h3 className="font-bold text-[14px] md:text-[16px] mb-2 group-hover:underline">
                       {collection_cards[i]?.title}
                     </h3>
                     <h3 className="text-gray-400 text-[13px]">
@@ -53,12 +56,15 @@ function CollectionSwiper() {
                   <img
                     src={collection_cards[i]?.img}
                     alt="colection_img"
-                    className="w-[70px] mr-2 md:mr-4 lg:w-[110px]"
+                    className="w-[70px] mr-2 md:mr-4 lg:w-[90px]"
                   />
-                </div>
-                <div className="flex justify-between">
+                </Link>
+                <Link
+                  to={item.link}
+                  className="flex justify-between group hover:text-black"
+                >
                   <div className="my-auto  pt-[10px] pl-[22px]">
-                    <h3 className="font-bold text-[14px] md:text-[16px] mb-2">
+                    <h3 className="font-bold text-[14px] md:text-[16px] mb-2 group-hover:underline">
                       {collection_cards[i + 1]?.title}
                     </h3>
                     <h3 className="text-gray-400 text-[13px]">
@@ -68,9 +74,9 @@ function CollectionSwiper() {
                   <img
                     src={collection_cards[i + 1]?.img}
                     alt="colection_img"
-                    className="w-[70px] mr-2 md:mr-4 lg:w-[110px]"
+                    className="w-[70px] mr-2 md:mr-4 lg:w-[90px]"
                   />
-                </div>
+                </Link>
               </SwiperSlide>
             );
           })}

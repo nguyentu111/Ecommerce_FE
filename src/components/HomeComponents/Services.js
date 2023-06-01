@@ -23,8 +23,12 @@ function Services() {
                   clname = "hidden md:flex";
                   break;
                 }
-                default: {
+                case 3: {
                   clname = "hidden lg:flex";
+                  break;
+                }
+                default: {
+                  clname = "hidden xl:flex";
                   break;
                 }
               }
