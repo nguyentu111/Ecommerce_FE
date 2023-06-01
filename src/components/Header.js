@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
-import compare from "../images/compare.svg";
-import wishlist from "../images/wishlist.svg";
-import user from "../images/user.svg";
-import cart from "../images/cart.svg";
-import menu from "../images/menu.svg";
-import { Twirl as Hamburger } from "hamburger-react";
 import Modal from "./Modal";
-import { Drawer } from "@mui/material";
-import { menu_items } from "../utils/Data";
-import MenuItemDropDown from "./MenuItemDropDown";
 const HeaderSearch = () => (
   <div className="input-group w-[360px]">
     <input
@@ -70,7 +61,7 @@ const Header = () => {
                     className="d-flex align-items-center gap-10 text-white"
                   >
                     <img
-                      src={compare}
+                      src="images/compare.svg"
                       alt="compare"
                       className="w-[20px] sm:w-[27px] lg-[35px]  m-2"
                     />
@@ -85,7 +76,7 @@ const Header = () => {
                     className="d-flex align-items-center gap-10 text-white"
                   >
                     <img
-                      src={wishlist}
+                      src="images/wishlist.svg"
                       alt="wishlist"
                       className="w-[20px] sm:w-[27px] lg-[35px]  m-2"
                     />
@@ -100,7 +91,7 @@ const Header = () => {
                     className="d-flex align-items-center gap-10 text-white"
                   >
                     <img
-                      src={user}
+                      src="images/user.svg"
                       alt="user"
                       className="w-[20px] sm:w-[27px] lg-[35px]  m-2"
                     />
@@ -115,7 +106,7 @@ const Header = () => {
                     className="d-flex align-items-center gap-10 text-white"
                   >
                     <img
-                      src={cart}
+                      src="images/cart.svg"
                       alt="cart"
                       className="w-[20px] sm:w-[27px] lg-[35px]  m-2"
                     />
@@ -150,7 +141,7 @@ const Header = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <img src={menu} alt="" />
+                      <img src="images/menu.svg" alt="" />
                       <span className="me-5 d-inline-block">
                         Shop Categories
                       </span>
