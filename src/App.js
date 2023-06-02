@@ -21,10 +21,12 @@ import TermAndContions from "./pages/TermAndContions";
 import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

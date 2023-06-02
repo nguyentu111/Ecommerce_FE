@@ -13,9 +13,6 @@ const swiperBreakPoints = {
   480: {
     slidesPerView: 1,
   },
-  660: {
-    slidesPerView: 2,
-  },
   970: {
     slidesPerView: 2,
   },
@@ -31,7 +28,7 @@ function SpecialProductSwiper() {
         navigation
         modules={[Autoplay]}
         autoplay={{
-          delay: 4000,
+          delay: 10000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -48,7 +45,7 @@ function SpecialProductSwiper() {
         )}
       >
         <div className="flex justify-between ">
-          <h2 className="section-title">Featured Collection</h2>
+          <h2 className="section-title">Special Products</h2>
           <div className="flex">
             <SwiperButton type="prev" clName="p-2 rounded-sm">
               <span aria-label="Previous"></span>

@@ -54,7 +54,7 @@ a {
   background-color: var(--color-232f3e);
   color: white;
   font-size: 14px;
-  padding: 13px 33px;
+  padding: 7px 20px;
   border-radius: 25px;
 }
 .button:hover {
@@ -297,9 +297,6 @@ footer .input-group-text {
 .product-card:hover .product-image > img:last-child {
   display: block;
 }
-.product-card:hover .action-bar {
-  right: 15px;
-}
 .product-card .product-details h6 {
   color: var(--color-bf4800);
   font-size: 13px;
@@ -322,11 +319,7 @@ footer .input-group-text {
   color: var(--color-777777);
   margin-right: 20px;
 }
-.action-bar {
-  top: 10%;
-  right: -23px;
-  transition: 0.3s;
-}
+
 .wishlist-icon {
   top: 2%;
   right: 15px;
@@ -825,5 +818,18 @@ footer .input-group-text {
 @layer components {
   .section-title {
     @apply text-xl font-bold mb-4;
+  }
+  .action-bar-icon {
+    @apply hover:bg-[var(--color-febd69)] p-[5px] rounded-full items-center flex justify-center transition-all duration-500;
+  }
+  .tab-wrapper {
+    /* @apply flex cursor-pointer card-wrapper rounded-[10px] !py-[7px] !px-0; */
+    @apply flex pb-[10px] overflow-scroll select-none;
+  }
+  .tab-item-text {
+    @apply px-[20px] py-[19px] text-gray-400 group-hover:text-black leading-[18px];
+  }
+  .tab-item {
+    @apply text-[14px] font-bold flex items-center lg:px-[10px] lg:py-[7px] hover:bg-gray-500/10 cursor-pointer;
   }
 }

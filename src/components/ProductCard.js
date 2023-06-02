@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from "react-router-dom";
+import ActionBar from "./ActionBar";
 const ProductCard = (props) => {
   const { grid } = props;
   let location = useLocation();
@@ -15,13 +16,9 @@ const ProductCard = (props) => {
               ? "/product/:id"
               : ":id"
           }`}
-          className="product-card card-wrapper position-relative"
+          className="product-card card-wrapper relative group"
         >
-          <div className="wishlist-icon position-absolute">
-            <button className="border-0 bg-transparent">
-              <img src="images/wish.svg" alt="wishlist" />
-            </button>
-          </div>
+          <ActionBar data={{}} />
           <div className="product-image">
             <img src="images/watch.jpg" className="m-auto" alt="product" />
             <img src="images/watch2.jpg" className="m-auto" alt="product" />
@@ -46,19 +43,6 @@ const ProductCard = (props) => {
               provident, similique sunt...
             </p>
             <p className="price">$100.00</p>
-          </div>
-          <div className="action-bar position-absolute">
-            <div className="d-flex flex-column gap-15">
-              <button className="border-0 bg-transparent">
-                <img src="images/prodcompare.svg" alt="compare" />
-              </button>
-              <button className="border-0 bg-transparent">
-                <img src="images/view.svg" alt="view" />
-              </button>
-              <button className="border-0 bg-transparent">
-                <img src="images/add-cart.svg" alt="addcart" />
-              </button>
-            </div>
           </div>
         </Link>
       </div>

@@ -12,6 +12,7 @@ import FeatureColectionSwiper from "../components/HomeComponents/FeatureColectio
 import SubBanner from "../components/HomeComponents/SubBanner";
 import Services from "../components/HomeComponents/Services";
 import SpecialProductSwiper from "../components/HomeComponents/SpecialProductSwiper";
+import PopularProduct from "../components/HomeComponents/PopularProduct";
 
 const Home = () => {
   return (
@@ -28,19 +29,7 @@ const Home = () => {
       <SubBanner />
 
       <SpecialProductSwiper />
-      <Container class1="popular-wrapper py-5 home-wrapper-2">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Our Popular Products</h3>
-          </div>
-        </div>
-        <div className="row">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
-      </Container>
+      <PopularProduct />
       <Container class1="marque-wrapper home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
