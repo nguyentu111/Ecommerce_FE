@@ -65,7 +65,7 @@ const Header = () => {
                       alt="compare"
                       className="w-[20px] sm:w-[27px] lg-[35px]  m-2"
                     />
-                    <p className="mb-0 hidden xl:block">
+                    <p className="mb-0 hidden xl:block text-[13px] ">
                       Compare <br /> Products
                     </p>
                   </Link>
@@ -80,7 +80,7 @@ const Header = () => {
                       alt="wishlist"
                       className="w-[20px] sm:w-[27px] lg-[35px]  m-2"
                     />
-                    <p className="mb-0 hidden xl:block">
+                    <p className="mb-0 hidden xl:block text-[13px]">
                       Favourite <br /> wishlist
                     </p>
                   </Link>
@@ -95,7 +95,7 @@ const Header = () => {
                       alt="user"
                       className="w-[20px] sm:w-[27px] lg-[35px]  m-2"
                     />
-                    <p className="mb-0 hidden xl:block">
+                    <p className="mb-0 hidden xl:block text-[13px]">
                       Log in <br /> My Account
                     </p>
                   </Link>

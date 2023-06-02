@@ -7,7 +7,7 @@ const ProductCard = (props) => {
   let location = useLocation();
   return (
     <>
-      <div className="select-none">
+      <div className="select-none h-full">
         <Link
           to={`${
             location.pathname == "/"
@@ -16,7 +16,7 @@ const ProductCard = (props) => {
               ? "/product/:id"
               : ":id"
           }`}
-          className="product-card card-wrapper relative group"
+          className="product-card card-wrapper relative group h-full"
         >
           <ActionBar data={{}} />
           <div className="product-image">

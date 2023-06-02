@@ -13,6 +13,7 @@ import SubBanner from "../components/HomeComponents/SubBanner";
 import Services from "../components/HomeComponents/Services";
 import SpecialProductSwiper from "../components/HomeComponents/SpecialProductSwiper";
 import PopularProduct from "../components/HomeComponents/PopularProduct";
+import LastestBlog from "../components/HomeComponents/LastestBlog";
 
 const Home = () => {
   return (
@@ -30,34 +31,66 @@ const Home = () => {
 
       <SpecialProductSwiper />
       <PopularProduct />
-      <Container class1="marque-wrapper home-wrapper-2 py-5">
-        <div className="row">
+      <Container class1="marque-wrapper home-wrapper-2 py-5 select-none">
+        <div className="card-wrapper">
           <div className="col-12">
-            <div className="marquee-inner-wrapper card-wrapper">
+            <div className="marquee-inner-wrapper">
               <Marquee className="d-flex">
                 <div className="mx-4 w-25">
-                  <img src="images/brand-01.png" alt="brand" />
+                  <img
+                    src="images/brand-01.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
                 <div className="mx-4 w-25">
-                  <img src="images/brand-02.png" alt="brand" />
+                  <img
+                    src="images/brand-02.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
                 <div className="mx-4 w-25">
-                  <img src="images/brand-03.png" alt="brand" />
+                  <img
+                    src="images/brand-03.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
                 <div className="mx-4 w-25">
-                  <img src="images/brand-04.png" alt="brand" />
+                  <img
+                    src="images/brand-04.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
                 <div className="mx-4 w-25">
-                  <img src="images/brand-05.png" alt="brand" />
+                  <img
+                    src="images/brand-05.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
                 <div className="mx-4 w-25">
-                  <img src="images/brand-06.png" alt="brand" />
+                  <img
+                    src="images/brand-06.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
                 <div className="mx-4 w-25">
-                  <img src="images/brand-07.png" alt="brand" />
+                  <img
+                    src="images/brand-07.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
                 <div className="mx-4 w-25">
-                  <img src="images/brand-08.png" alt="brand" />
+                  <img
+                    src="images/brand-08.png"
+                    alt="brand"
+                    draggable={false}
+                  />
                 </div>
               </Marquee>
             </div>
@@ -65,27 +98,7 @@ const Home = () => {
         </div>
       </Container>
 
-      <Container class1="blog-wrapper py-5 home-wrapper-2">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Our Latest Blogs</h3>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-3">
-            <BlogCard />
-          </div>
-          <div className="col-3">
-            <BlogCard />
-          </div>
-          <div className="col-3">
-            <BlogCard />
-          </div>
-          <div className="col-3">
-            <BlogCard />
-          </div>
-        </div>
-      </Container>
+      <LastestBlog />
     </>
   );
 };

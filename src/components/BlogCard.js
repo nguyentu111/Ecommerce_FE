@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 
 const BlogCard = () => {
   return (
-    <div className="blog-card">
-      <div className="card-image">
-        <img src="images/blog-1.jpg" className="img-fluid w-100" alt="blog" />
+    <Link className="blog-card group overflow-hidden">
+      <div className="card-image overflow-hidden">
+        <img
+          src="images/blog-1.jpg"
+          className="img-fluid w-100 group-hover:scale-110  transition-all duration-300 "
+          alt="blog"
+        />
       </div>
       <div className="blog-content">
         <p className="date">1 Dec, 2022</p>
@@ -18,7 +22,7 @@ const BlogCard = () => {
           Read More
         </Link>
       </div>
-    </div>
+    </Link>
   );
 };
 

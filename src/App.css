@@ -17,6 +17,10 @@
   --color-777777: #777777;
   --color-1c1c1b: #1c1c1b;
 }
+::selection {
+  color: white;
+  background: black;
+}
 .section-heading {
   font-size: 26px;
   line-height: 32px;
@@ -27,6 +31,7 @@
   background-color: white;
   box-shadow: 0 0 10px #0000001a;
   padding: 15px;
+  border-radius: 10px;
 }
 body {
   font-family: "Rubik", sans-serif;
@@ -239,7 +244,7 @@ footer .input-group-text {
 .blog-content {
   padding: 15px;
 }
-.blog-contentp.date {
+.blog-content p.date {
   font-size: 13px;
   line-height: 24px;
   text-transform: uppercase;
@@ -247,15 +252,18 @@ footer .input-group-text {
   font-weight: 400;
   color: var(--color-777777);
   padding: 0;
+  margin-bottom: 8px;
 }
 .blog-content h5 {
   font-size: 18px;
-  color: var(--color-131921);
+  color: var(--color-1c1c1b);
+  margin-bottom: 8px;
 }
 .blog-content p.desc {
   font-size: 13px;
   line-height: 22px;
   color: var(--color-777777);
+  margin-bottom: 8px;
 }
 .single-blog-card a {
   font-size: 18px;
@@ -815,6 +823,8 @@ footer .input-group-text {
   font-size: 16px;
   margin-bottom: 14px;
 }
+@layer base {
+}
 @layer components {
   .section-title {
     @apply text-xl font-bold mb-4;
@@ -822,14 +832,17 @@ footer .input-group-text {
   .action-bar-icon {
     @apply hover:bg-[var(--color-febd69)] p-[5px] rounded-full items-center flex justify-center transition-all duration-500;
   }
-  .tab-wrapper {
-    /* @apply flex cursor-pointer card-wrapper rounded-[10px] !py-[7px] !px-0; */
-    @apply flex pb-[10px] overflow-scroll select-none;
+  .tab-wrapper-1 {
+    @apply flex pb-[10px] overflow-scroll select-none rounded-lg flex-shrink-0;
+  }
+  .tab-wrapper-2 {
+    @apply block cursor-pointer card-wrapper overflow-hidden rounded-[10px] !py-[7px]
+     !px-0 mr-[20px] flex-shrink-0;
   }
   .tab-item-text {
-    @apply px-[20px] py-[19px] text-gray-400 group-hover:text-black leading-[18px];
+    @apply md:px-[20px] md:py-[19px] text-[13px] md:text-[15px] text-gray-400 group-hover:text-black leading-[18px];
   }
   .tab-item {
-    @apply text-[14px] font-bold flex items-center lg:px-[10px] lg:py-[7px] hover:bg-gray-500/10 cursor-pointer;
+    @apply pr-[10px] text-[14px] font-bold flex items-center lg:px-[10px] lg:py-[7px] hover:bg-gray-500/10 cursor-pointer flex-shrink-0;
   }
 }

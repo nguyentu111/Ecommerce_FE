@@ -28,8 +28,8 @@ function MenuItemDropDown({ item }) {
           className={classNames("bg-white text-black overflow-hidden pl-5")}
         >
           <ul className="p-2">
-            {item.inner.map((inner) => (
-              <li>
+            {item.inner.map((inner, i) => (
+              <li key={i}>
                 <Link to={inner.link} className="text-[13px] font-semibold">
                   {inner.title}
                 </Link>

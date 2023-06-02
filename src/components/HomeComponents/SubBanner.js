@@ -62,7 +62,6 @@ function SubBanner() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        lazy
         breakpoints={swiperBreakPoints}
         spaceBetween={matches ? 20 : 10}
         slidesPerView={3}
@@ -75,7 +74,7 @@ function SubBanner() {
         }
       >
         {data.map((val, i) => (
-          <SwiperSlide>
+          <SwiperSlide key={i}>
             <Link
               to={val.link}
               className={classNames(
